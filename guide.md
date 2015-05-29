@@ -1,4 +1,4 @@
-You can upload any data to the Bitcoin Blockchain.
+You can broadcast any data to the Bitcoin Blockchain.
 
 The advantages are that
 
@@ -9,8 +9,3 @@ The advantages are that
 The disadvantage is that
 
 1. Only tiny amounts of data can be uploaded.
-
-HOW
-
-The easiest way is through [Counterwallet](https://counterwallet.io/). You'll need a tiny amount of Bitcoin; one dollar's worth will be sufficent for dozens of broadcasts. No registration is needed. Just follow the wallet's instructions.
-
