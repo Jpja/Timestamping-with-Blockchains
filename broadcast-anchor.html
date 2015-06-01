@@ -3,8 +3,8 @@
 	<script>
 	var mnemonic = ""; //OPTIONAL. enter passphrase here so you won't need to fill it in each time
 	var add_from = ""; //OPTIONAL. enter address here so you won't need to fill it in each time
-	var info_url = ""; //http://example.com/index.php
-	var bcbegin = "test"; //begin broadcast with this string .. recommended very short, like 8-12 characters, because broadcast is only 32 chrs and the hash will be truncated
+	var info_url = "http://xcp.pw/instone/index.php"; //http://example.com/index.php
+	var bcbegin = "xcp.pw test"; //begin broadcast with this string .. recommended very short, like 8-12 characters, because broadcast is only 32 chrs and the hash will be truncated
 	var msig_total = 0.000078;  //total btc to multisig output (returned to sender)
 	var transfee = 0.00001;  //bitcoin tx fee
 	</script>
@@ -606,18 +606,18 @@
 
     
     
-    <h1 style="margin-top: 50px;">Broadcast Hash to BTC Blockchain</h1>
+    <h1 style="margin-top: 50px;">Anchor DB to BTC Blockchain</h1>
     <div style="margin-top: 30px;">Mnemonic Passphrase (12 words)</div>
     <input type="text" id="mnemonic"  size="77" required>
 
     <div style="margin-top: 20px;">Sending Address</div>
     <input type="text" id="add_from" size="77" required>
 	
-	<div style="margin-top: 20px;">Block Info URL</div>
+	<div style="margin-top: 20px;">DB Info URL</div>
     <input type="text" id="info_url" size="77" required>
     
     <div style="margin-top: 30px;">
-    <input type="button" id="gettransbutton" value="Broadcast Hash to BTC Blockchain">
+    <input type="button" id="gettransbutton" value="Anchor DB to BTC Blockchain">
     </div>
     
     <div style="margin-top: 30px; margin-bottom: 100px;" id="raw"></div>
