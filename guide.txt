@@ -25,10 +25,10 @@ You may also use the broadcasting tools included in this bundle.
 * "broadcast-anchor.html" broadcasts the hash of a database so that its current state can not be altered without being
 detected.
 
-For each of these tools you need a so-callet Counterwallet passphrase. Just log in to it once and paste the passphrase into
-the tool. In the very beginning of each HTML file you may paste the passphrase so that you won't need to type it in each 
-time. You must also specify which address you use, whcih you will see when you log in to Counterwallet. The address must have
-a tiny amount of Bitcoin.
+For each of these tools you need a so-callet Counterwallet passphrase. Just log in to it once and copy the passphrase. In the
+very beginning of each HTML file you may paste the passphrase so that you won't need to type it in all the time. You must
+also specify which address you use, whcih you will see when you log in to Counterwallet. The address must have a tiny amount
+of Bitcoin.
 
 It is adviced you use this passphrase only for broadcasting, and only keep tiny amounts of Bitcoin on it. 
 
