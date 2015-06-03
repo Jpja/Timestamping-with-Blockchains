@@ -21,9 +21,9 @@ worth will be sufficent for dozens of broadcasts. No registration is needed. Jus
 
 You may also use the broadcasting tools included in this bundle.
 * "broadcast-message.html" lets you broadcast any text (maximum 32 characters) to the Bitcoin blockchain.
-* "broadcast-md5file.html" lets you pick a file and broadcasts its MD% checksum to the Bitcoin blockchain.
+* "broadcast-md5file.html" lets you pick a file and broadcasts its MD5 checksum (hash) to the Bitcoin blockchain.
 * "broadcast-anchor.html" broadcasts the hash of a database so that its current state can not be altered without being
-detected (this will be explained later in the guide).
+detected.
 
 For each of these tools you need a so-callet Counterwallet passphrase. Just log in to it once and paste the passphrase into
 the tool. In the very beginning of each HTML file you may paste the passphrase so that you won't need to type it in each 
