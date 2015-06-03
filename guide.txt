@@ -48,7 +48,7 @@ collect all photos into a single zip file. With "broadcast-md5file.html" you tim
 It is crucial that you keep a backup of the timestamped file. Even the tiniest change to the file changes its hash, which
 renders the timestamp useless.
 
-Since a file's hash does not reveal anything about the file itself, you can timestamp private files. This is parcularly
+Since a file's hash does not reveal anything about the file itself, you can timestamp private files. This is particulary
 useful when working on a project yet to be published.
 
 The Bitcoin address you broadcast from can be private. However, every address is linked to the address(es) its funds
