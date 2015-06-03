@@ -1,4 +1,4 @@
-GUIDE TO TIMESTAMPING DATA ON THE BITCOIN BLOCKCHAIN
+**GUIDE TO TIMESTAMPING DATA ON THE BITCOIN BLOCKCHAIN**
 
 You can broadcast any data to the Bitcoin Blockchain.
 
@@ -12,7 +12,8 @@ The disadvantage is that
 
 1. Only tiny amounts of data can be uploaded.
 
-HOW
+
+**HOW**
 
 The easiest way is through Counterwallet (https://counterwallet.io/). You'll need a tiny amount of Bitcoin; one dollar's worth will be sufficent for dozens of broadcasts. No registration is needed. Just follow the wallet's instructions.
 
@@ -25,5 +26,8 @@ For each of these tools you need a so-callet Counterwallet passphrase. Just log 
 
 It is adviced you use this passphrase only for broadcasting, and only keep tiny amounts of Bitcoin on it. 
 
-WHY
+
+**WHY**
+
+
 
