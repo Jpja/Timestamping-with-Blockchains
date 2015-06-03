@@ -1,7 +1,7 @@
 
 **GUIDE TO TIMESTAMPING DATA ON THE BITCOIN BLOCKCHAIN**
 
-You can broadcast any data to the Bitcoin Blockchain.
+You can broadcast data to the Bitcoin Blockchain.
 
 The advantages are that
 
