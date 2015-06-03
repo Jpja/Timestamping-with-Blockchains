@@ -15,33 +15,44 @@ The disadvantage is that
 
 **HOW**
 
-The easiest way is through Counterwallet (https://counterwallet.io/). You'll need a tiny amount of Bitcoin; one dollar's worth will be sufficent for dozens of broadcasts. No registration is needed. Just follow the wallet's instructions.
+The easiest way is through Counterwallet (https://counterwallet.io/). You'll need a tiny amount of Bitcoin; one dollar's
+worth will be sufficent for dozens of broadcasts. No registration is needed. Just follow the wallet's instructions.
 
 You may also use the broadcasting tools included in this bundle.
 * "broadcast-message.html" lets you broadcast any text (maximum 32 characters) to the Bitcoin blockchain.
 * "broadcast-md5file.html" lets you pick a file and broadcasts its MD% checksum to the Bitcoin blockchain.
-* "broadcast-anchor.html" broadcasts the hash of a database so that its current state can not be altered without being detected (this will be explained later in the guide).
+* "broadcast-anchor.html" broadcasts the hash of a database so that its current state can not be altered without being
+detected (this will be explained later in the guide).
 
-For each of these tools you need a so-callet Counterwallet passphrase. Just log in to it once and paste the passphrase into the tool. In the very beginning of each HTML file you may paste the passphrase so that you won't need to type it in each time. You must also specify which address you use, whcih you will see when you log in to Counterwallet. The address must have a tiny amount of Bitcoin.
+For each of these tools you need a so-callet Counterwallet passphrase. Just log in to it once and paste the passphrase into
+the tool. In the very beginning of each HTML file you may paste the passphrase so that you won't need to type it in each 
+time. You must also specify which address you use, whcih you will see when you log in to Counterwallet. The address must have
+a tiny amount of Bitcoin.
 
 It is adviced you use this passphrase only for broadcasting, and only keep tiny amounts of Bitcoin on it. 
 
 
 **WHY**
 
-These broadcasts can be used to prove possession of files at a given point in time. It can even be used for private files, as well as with a high degree of anonymity. Example usage:
+These broadcasts can be used to prove possession of files at a given point in time. It can even be used for private files, as
+well as with a high degree of anonymity. Example usage:
 
-* You rent an apartment. You shoot photos to document all spots on the walls and scratches on the furniture. Finally you collect all photos into a single zip file. With "broadcast-md5file.html" you timestamp this file.
+* You rent an apartment. You shoot photos to document all spots on the walls and scratches on the furniture. Finally you
+collect all photos into a single zip file. With "broadcast-md5file.html" you timestamp this file.
 
 * You're a financial analyst. Each new report is timestamped with "broadcast-md5file.html".
 
 * You're a writer. Before you submit your work to publishers, you timestamp it to prove it originates from you.
 
-It is crucial that you keep a backup of the timestamped file. Even the tiniest change to the file changes its hash, which renders the timestamp useless.
+It is crucial that you keep a backup of the timestamped file. Even the tiniest change to the file changes its hash, which
+renders the timestamp useless.
 
-Since a file's hash does not reveal anything about the file itself, you can timestamp private files. This is parcularly useful when working on a project yet to be published.
+Since a file's hash does not reveal anything about the file itself, you can timestamp private files. This is parcularly
+useful when working on a project yet to be published.
 
-The Bitcoin address you broadcast from can be private. However, every address is linked to the address(es) its funds originate from. Therefore someone who really tries may be able to track you down. In any case, if you want to be public it is easy to do so, and you can choose do to so anytime in the future.
+The Bitcoin address you broadcast from can be private. However, every address is linked to the address(es) its funds
+originate from. Therefore someone who really tries may be able to track you down. In any case, if you want to be public it is
+easy to do so, and you can choose do to so anytime in the future.
 
 
 **AUTOMATED TIMESTAMPING**
@@ -56,11 +67,17 @@ A user case can be a camera app. Everytime someone snaps a photo, the photo's ha
 know, submitting the hash reveals nothing about the photo so there are no privacy concerns here. The server collects hashes
 from thousands of users around the world, and once an hour the database is anchored to the Bitcoin blockchain.
 
-A downside of this approach is that if the database is lost or unaccessable, all the timestamps are also gone. A solution would be that all users of the app also would receive a copy of the database. The problem with this is that, although each hash is just a few bytes, millions of users around the world will shoot billions of photos, thus require everyone to allocate gigabtytes of data.
+A downside of this approach is that if the database is lost or unaccessable, all the timestamps are also gone. A solution
+would be that all users of the app also would receive a copy of the database. The problem with this is that, although each
+hash is just a few bytes, millions of users around the world will shoot billions of photos, thus require everyone to allocate
+gigabtytes of data.
 
-To circumvent this, hashes can be collected into blocks, each block will be anchored to the blockchain, and each user will only receive a copy of the blocks where his photos are timestamped.
+To circumvent this, hashes can be collected into blocks, each block will be anchored to the blockchain, and each user will
+only receive a copy of the blocks where his photos are timestamped.
 
-These features are included in "index.php". A standard webhost with database support can run it. At the very beginning of the file you must specify the database credentials. Optionally you may also whether to make blocks or not, anf if so - how often and the maximum amount of messages per block, and the maximum length of each message. 
+These features are included in "index.php". A standard webhost with database support can run it. At the very beginning of the
+file you must specify the database credentials. Optionally you may also whether to make blocks or not, anf if so - how often
+and the maximum amount of messages per block, and the maximum length of each message. 
 
 To submit a new message, request a url such as http://YOURDOMAIN.com/FOLDER/?msg=YOURMESSAGE.
 
@@ -69,4 +86,6 @@ To anchor the latest block or row, run "broadcast-anchor.html" locally in your b
 
 **SUPPORT**
 
-I, JP Janssen, have made these tools open-source, free-to-use, as-is. However, I understand that they may be confusing at first and that bugs may cause errors. I offer support on a paid, consultancy basis. Please contact me here on GitHub or add me on skype; jp.janssen.
+I, JP Janssen, have made these tools open-source, free-to-use, as-is. However, I understand that they may be confusing at
+first and that bugs may cause errors. I offer support on a paid, consultancy basis. Please contact me here on GitHub or add
+me on skype; jp.janssen.
