@@ -1,0 +1,29 @@
+GUIDE TO TIMESTAMPING DATA ON THE BITCOIN BLOCKCHAIN
+
+You can broadcast any data to the Bitcoin Blockchain.
+
+The advantages are that
+
+1. The data is immutable - no one can ever delete or modify it.
+2. The data is timestamped.
+3. You can do it anonymously and choose to reveal your identity later.
+
+The disadvantage is that
+
+1. Only tiny amounts of data can be uploaded.
+
+HOW
+
+The easiest way is through Counterwallet (https://counterwallet.io/). You'll need a tiny amount of Bitcoin; one dollar's worth will be sufficent for dozens of broadcasts. No registration is needed. Just follow the wallet's instructions.
+
+You may also use the broadcasting tools included in this bundle.
+* "broadcast-message.html" lets you broadcast any text (maximum 32 characters) to the Bitcoin blockchain.
+* "broadcast-md5file.html" lets you pick a file and broadcasts its MD% checksum to the Bitcoin blockchain.
+* "broadcast-anchor.html" broadcasts the hash of a database so that its current state can not be altered without being detected (this will be explained later in the guide).
+
+For each of these tools you need a so-callet Counterwallet passphrase. Just log in to it once and paste the passphrase into the tool. In the very beginning of each HTML file you may paste the passphrase so that you won't need to type it in each time. You must also specify which address you use, whcih you will see when you log in to Counterwallet. The address must have a tiny amount of Bitcoin.
+
+It is adviced you use this passphrase only for broadcasting, and only keep tiny amounts of Bitcoin on it. 
+
+WHY
+
