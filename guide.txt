@@ -1,5 +1,5 @@
 
-**GUIDE TO TIMESTAMPING DATA ON THE BITCOIN BLOCKCHAIN**
+** GUIDE TO TIMESTAMPING DATA ON THE BITCOIN BLOCKCHAIN **
 
 You can broadcast data to the Bitcoin Blockchain.
 
@@ -14,7 +14,7 @@ The disadvantage is that
 1. Only tiny amounts of data can be uploaded.
 
 
-**HOW**
+** HOW **
 
 The easiest way is through Counterwallet (https://counterwallet.io/). You'll need a tiny amount of Bitcoin; one dollar's
 worth will be sufficent for dozens of broadcasts. No registration is needed. Just follow the wallet's instructions.
@@ -33,7 +33,7 @@ a tiny amount of Bitcoin.
 It is adviced you use this passphrase only for broadcasting, and only keep tiny amounts of Bitcoin on it. 
 
 
-**WHY**
+** WHY **
 
 These broadcasts can be used to prove possession of files at a given point in time. It can even be used for private files, as
 well as with a high degree of anonymity. Example usage:
@@ -56,7 +56,7 @@ originate from. Therefore someone who really tries may be able to track you down
 easy to do so, and you can choose do to so anytime in the future.
 
 
-**AUTOMATED TIMESTAMPING**
+** AUTOMATED TIMESTAMPING **
 
 It is not practical to make a large amount of broadcasts to the Bitcoin blockchain. Instead it is a better idea to make a 
 local database with file hashes, and finally anchor this database to the Bitcoin blockhain.
@@ -85,7 +85,7 @@ To submit a new message, request a url such as http://YOURDOMAIN.com/FOLDER/?msg
 To anchor the latest block or row, run "broadcast-anchor.html" locally in your browser. 
 
 
-**SUPPORT**
+** SUPPORT **
 
 I, JP Janssen, have made these tools open-source, free-to-use, as-is. However, I understand that they may be confusing at
 first and that bugs may cause errors. I offer support on a paid, consultancy basis. Please contact me here on GitHub or add
