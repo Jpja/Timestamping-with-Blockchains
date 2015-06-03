@@ -29,5 +29,35 @@ It is adviced you use this passphrase only for broadcasting, and only keep tiny 
 
 **WHY**
 
+These broadcasts can be used to prove possession of files at a given point in time. It can even be used for private files, as well as with a high degree of anonymity. Example usage:
+
+* You rent an apartment. You shoot photos to document all spots on the walls and scratches on the furniture. Finally you collect all photos into a single zip file. With "broadcast-md5file.html" you timestamp this file.
+
+* You're a financial analyst. Each new report is timestamped with "broadcast-md5file.html".
+
+* You're a writer. Before you submit your work to publishers, you timestamp it to prove it originates from you.
+
+It is crucial that you keep a backup of the timestamped file. Even the tiniest change to the file changes its hash, which renders the timestamp useless.
+
+Since a file's hash does not reveal anything about the file itself, you can timestamp private files. This is parcularly useful when working on a project yet to be published.
+
+The Bitcoin address you broadcast from can be private. However, every address is linked to the address(es) its funds originate from. Therefore someone who really tries may be able to track you down. In any case, if you want to be public it is easy to do so, and you can choose do to so anytime in the future.
+
+
+**AUTOMATED TIMESTAMPING**
+
+It is not practical to make a large amount of broadcasts to the Bitcoin blockchain. Instead it is a better idea to make a 
+local database with file hashes, and finally anchor this database to the Bitcoin blockhain.
+
+The basic principle is that each message is submitted to a new table row, and that on each row there's also a hash of this
+message plus the hash from the previous row. Periodically the latest hash will be broadcast to the Bitcoin blockchain.
+
+A user case can be a camera app. Everytime someone snaps a photo, the photo's hash is sent to centralized server. As you now
+know, submitting the hash reveals nothing about the photo so there are no privacy concerns here. The server collects hashes
+from thousands of users around the world, and once an hour the database is anchored to the Bitcoin blockchain.
+
+A downside of this approach is that if the database is lost or unaccessable, all the timestamps are also gone. A solution would be that all users of the app also would receive a copy of the database. The problem with this is that, although each hash is just a few bytes, millions of users around the world will shoot billions of photos, thus require everyone to allocate gigabtytes of data.
+
+To circumvent this, hashes can be collected into blocks, each block will be anchored to the blockchain, and each user will only receive a copy of the blocks where his photos are timestamped.
 
 
