@@ -60,4 +60,13 @@ A downside of this approach is that if the database is lost or unaccessable, all
 
 To circumvent this, hashes can be collected into blocks, each block will be anchored to the blockchain, and each user will only receive a copy of the blocks where his photos are timestamped.
 
+These features are included in "index.php". A standard webhost with database support can run it. At the very beginning of the file you must specify the database credentials. Optionally you may also whether to make blocks or not, anf if so - how often and the maximum amount of messages per block, and the maximum length of each message. 
 
+To submit a new message, request a url such as http://YOURDOMAIN.com/FOLDER/?msg=YOURMESSAGE.
+
+To anchor the latest block or row, run "broadcast-anchor.html" locally in your browser. 
+
+
+**SUPPORT**
+
+I, JP Janssen, have made these tools open-source, free-to-use, as-is. However, I understand that they may be confusing at first and that bugs may cause errors. I offer support on a paid, consultancy basis. Please contact me here on GitHub or add me on skype; jp.janssen.
