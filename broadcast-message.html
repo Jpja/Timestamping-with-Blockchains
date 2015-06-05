@@ -7,7 +7,7 @@
 	var transfee = 0.00001;  //bitcoin tx fee
 	</script>
 
-	
+	<title>Broadcast Message to BTC Blockchain</title>
 	
     <!--<script src="../js/jquery.min.js"></script>-->
 	<script>
@@ -580,20 +580,37 @@
 			var mnemonicadj = $("#mnemonic").val();
 			var add_fromadj = $("#add_from").val();
 			var message = $("#message").val();
-			var messagevalue = $("#messagevalue").val();
+			//var messagevalue = $("#messagevalue").val();
 			
-			sendBroadcast(add_fromadj, message, messagevalue, 0, msig_total, transfee, mnemonicadj);
+			sendBroadcast(add_fromadj, message, 1, 0, msig_total, transfee, mnemonicadj);
 		   
 			 
 		});
 
 	});
 	</script>
+	
 
+	<style>
+		#page-wrap {
+			 width: 700px; 
+			 margin: 0 auto;
+		}
+		table, th, td {
+			border: 0px solid black;
+			border-collapse: collapse;
+		}
+		th, td {
+			padding: 5px;
+			text-align: left;    
+		}
+		#footer {
+			font-size: 12px;
+		}
+	</style>
 </head>
 <body onload="document.getElementById('mnemonic').value=mnemonic;document.getElementById('add_from').value=add_from;">
-
-    
+	<div id="page-wrap">    
     
     <h1 style="margin-top: 50px;">Broadcast Message to BTC Blockchain</h1>
     <div style="margin-top: 30px;">Mnemonic Passphrase (12 words)</div>
@@ -603,18 +620,32 @@
     <input type="text" id="add_from" size="77" required>
 	
 	<div style="margin-top: 20px;">Message (Max 32 Chars)</div>
-    <input type="text" id="message" size="77" required>
+    <input type="text" id="message" size="77" maxlength="32" required>
 	
-	<div style="margin-top: 20px;">Value</div>
-    <input type="text" id="messagevalue" size="77" value="0" required>
+	<!--<div style="margin-top: 20px;">Value</div>
+    <input type="text" id="messagevalue" size="77" value="1" required>-->
     
     <div style="margin-top: 30px;">
     <input type="button" id="gettransbutton" value="Broadcast Message to BTC Blockchain">
     </div>
     
-    <div style="margin-top: 30px; margin-bottom: 100px;" id="raw"></div>
-    
-    
-        
+    <div style="margin-top: 50px; margin-bottom: 50px;" id="raw"></div>
+	
+	<div style="margin-top: 50px; margin-bottom: 50px;" id="instructions">
+	<h3>Instructions</h3>
+	<ul>
+		<li>Input a passphrase. For your safety you are adviced to generate a new passphrase for this purpose only. Use tools on <a href="http://xcp.pw/">XCP.pw</a> or <a href="https://counterwallet.io/">Counterwallet</a> to generate a passphrase.</li>
+		<li>Input an address derived from the passphrase. The address must have some Bitcoin deposited to pay a fee to the Bitcoin network. For safety reason it is adviced not to deposit too much. Between 10 cents and one dollar is recommended. This is enough to make several broadcasts.</li>
+		<li>Input the message you want embedded on the Bitcoin blockchain. Be cautious, as whatever you broadcast will be stored forever.</li>
+	</ul>
+	<b>If form does not respond:</b> Save this html-file and run it locally. If it still does not work, Blockhain.info or Chain.so's API may be down. Try again in a short while. If you cannot get it to work after this, feel free to add an issue on <a href="https://github.com/jpja">GitHub</a>.
+	</div>
+	
+	<div style="margin-top: 50px; margin-bottom: 0px;" id="footer">
+		No warranty.<br />
+		Developed by JP Janssen. View on <a href="https://github.com/jpja">GitHub</a>. Skype: jp.janssen. <a href="https://twitter.com/jp_janssen">Twitter</a>. <a href="https://counterpartytalk.org/users/jpja/activity">CounterpartyTalk</a>.<br />
+		The project utilizes code from <a href="https://github.com/loon3/xcp-tools-js">Joe Looney</a>, jQuery, <a href="https://github.com/bitpay/bitcore">Bitcore</a>, <a href="http://github.com/ggozad/mnemonic.js">Mnemonic.js</a>, and numerous Bitcoin and crypto libraries as well as APIs from <a href="http://blockchain.info">Blockchain.info</a> and <a href="https://chain.so">Chain.so</a>.
+	</div>
+	</div>        
 </body>
 </html>
