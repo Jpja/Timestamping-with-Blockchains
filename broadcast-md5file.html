@@ -592,9 +592,29 @@
 	});
 	</script>
 		
+	
+	<style>
+		#page-wrap {
+			 width: 700px;
+			 margin: 0 auto;
+		}
+		table, th, td {
+			border: 0px solid black;
+			border-collapse: collapse;
+		}
+		th, td {
+			padding: 5px;
+			text-align: left;    
+		}
+		#footer {
+			font-size: 12px;
+		}
+	</style>
 	</head>
 	
 	<body onload="document.getElementById('mnemonic').value=mnemonic;document.getElementById('add_from').value=add_from;">
+		<div id="page-wrap">
+		
 		<h1 style="margin-top: 50px;">Broadcast MD5 File Hash to BTC Blockchain</h1>
 		<form method="POST" enctype="multipart/form-data" onsubmit="return false;" ><input id=file type=file placeholder="select a file" /></form>
 		<pre id=log></pre>
@@ -612,6 +632,7 @@
 					spark = new SparkMD5.ArrayBuffer(),
 					frOnload = function(e){
 						//log.innerHTML+="\nread chunk number "+parseInt(currentChunk+1)+" of "+chunks;
+						log.innerHTML = "Read chunk number "+parseInt(currentChunk+1)+" of "+chunks;
 						spark.append(e.target.result); // append array buffer
 						currentChunk++;
 						if (currentChunk < chunks)
@@ -619,7 +640,7 @@
 						else {
 							var filehash = spark.end();
 							//log.innerHTML+="\nfinished loading :)\n\ncomputed hash:\n"+filehash+"\n\nyou can select another file now!\n";
-							log.innerHTML= "File loaded successfully.\nMD5: " + filehash;
+							log.innerHTML = "File loaded successfully.\nMD5: " + filehash;
 							document.getElementById('message').value = filehash;
 						}
 					},
@@ -656,6 +677,23 @@
     <input type="button" id="gettransbutton" value="Broadcast Message to BTC Blockchain">
     </div>
     
-    <div style="margin-top: 30px; margin-bottom: 100px;" id="raw"></div>
-	</body>
+    <div style="margin-top: 50px; margin-bottom: 50px;" id="raw"></div>
+	
+	<div style="margin-top: 50px; margin-bottom: 50px;" id="instructions">
+	<h3>Instructions</h3>
+	<ul>
+		<li>Select a file of which MD5 signature you want embedded to the Bitcoin blockchain.</li>
+		<li>Input a passphrase. For your safety you are adviced to generate a new passphrase for this purpose only. Use tools on <a href="http://xcp.pw/">XCP.pw</a> or <a href="https://counterwallet.io/">Counterwallet</a> to generate a passphrase.</li>
+		<li>Input an address derived from the passphrase. The address must have some Bitcoin deposited to pay a fee to the Bitcoin network. For safety reason it is adviced not to deposit too much. Between 10 cents and one dollar is recommended. This is enough to make several broadcasts.</li>
+	</ul>
+	<b>If form does not respond:</b> Save this html-file and run it locally. If it still does not work, Blockhain.info or Chain.so's API may be down. Try again in a short while. If you cannot get it to work after this, feel free to add an issue on <a href="https://github.com/jpja">GitHub</a>.
+	</div>
+	
+	<div style="margin-top: 50px; margin-bottom: 0px;" id="footer">
+		No warranty.<br />
+		Developed by JP Janssen. View on <a href="https://github.com/jpja">GitHub</a>. Skype: jp.janssen. <a href="https://twitter.com/jp_janssen">Twitter</a>. <a href="https://counterpartytalk.org/users/jpja/activity">CounterpartyTalk</a>.<br />
+		The project utilizes code from <a href="https://github.com/loon3/xcp-tools-js">Joe Looney</a>, <a href="https://github.com/satazor/SparkMD5">SparkMD5</a>, jQuery, <a href="https://github.com/bitpay/bitcore">Bitcore</a>, <a href="http://github.com/ggozad/mnemonic.js">Mnemonic.js</a>, and numerous Bitcoin and crypto libraries as well as APIs from <a href="http://blockchain.info">Blockchain.info</a> and <a href="https://chain.so">Chain.so</a>.
+	</div>
+	</div>
+</body>
 </html>
